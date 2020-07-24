@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+function test(e)
+{
+
+if(( e.which >= 65 && e.which <=90 ))
+{
+e.preventDefault(); //a-97 , A - 65
+
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<input type="text"  onkeypress ="test(event)">
+
+
+</body>
+
+</html>
