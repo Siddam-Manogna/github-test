@@ -1,70 +1,51 @@
-package com.player.model;
+package com.mydrv.model;
 
 import java.util.Date;
 
 public class Player {
-	private Date pdob;
-	private String pid;
-	private String pfName;
-	private String plName;
-	private String pCountry;
-	private int pRecords;
-	public Date getPdob() {
-		return pdob;
-	}
-	public void setPdob(Date pdob) {
-		this.pdob = pdob;
-	}
-	public String getPid() {
-		return pid;
-	}
-	public void setPid(String pid) {
-		this.pid = pid;
-	}
-	public String getPfName() {
-		return pfName;
-	}
-	public void setPfName(String pfName) {
-		this.pfName = pfName;
-	}
-	public String getPlName() {
-		return plName;
-	}
-	public void setPlName(String plName) {
-		this.plName = plName;
-	}
-	public String getpCountry() {
-		return pCountry;
-	}
-	public void setpCountry(String pCountry) {
-		this.pCountry = pCountry;
-	}
-	public int getpRecords() {
-		return pRecords;
-	}
-	public void setpRecords(int pRecords) {
-		this.pRecords = pRecords;
-	}
-	public Player(Date pdob, String pid, String pfName, String plName, String pCountry, int pRecords) {
-		super();
-		this.pdob = pdob;
-		this.pid = pid;
-		this.pfName = pfName;
-		this.plName = plName;
-		this.pCountry = pCountry;
-		this.pRecords = pRecords;
-	}
-	public Player() {
-		
-	}
-	@Override
-	public String toString() {
-		return "Player [pdob=" + pdob + ", pid=" + pid + ", pfName=" + pfName + ", plName=" + plName + ", pCountry="
-				+ pCountry + ", pRecords=" + pRecords + "]";
-	}
-	
+
+	String playerId;
+	String fname;
+	String lname;
+Date	dob;
+public String getPlayerId() {
+	return playerId;
+}
+public void setPlayerId(String playerId) {
+	this.playerId = playerId;
+}
+public String getFname() {
+	return fname;
+}
+public void setFname(String fname) {
+	this.fname = fname;
+}
+public String getLname() {
+	return lname;
+}
+public void setLname(String lname) {
+	this.lname = lname;
+}
+public Date getDob() {
+	return dob;
+}
+public void setDob(Date dob) {
+	this.dob = dob;
+}
+public Player(String playerId, String fname, String lname, Date dob) {
+	super();
+	this.playerId = playerId;
+	this.fname = fname;
+	this.lname = lname;
+	this.dob = dob;
+}
 	
 
-	
-
+public Player() {
+	// TODO Auto-generated constructor stub
+}
+@Override
+public String toString() {
+	return "Player [playerId=" + playerId + ", fname=" + fname + ", lname=" + lname + ", dob=" + dob + "]";
+}
 }

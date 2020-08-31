@@ -1,58 +1,56 @@
-package com.Empservlet.demo;
+package com.mydrv.model;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+public class Employee {
+	private int empId;
+	private String empName;
+	private int empAge;
+	private String empAddress;
+	public Employee() {
+	// TODO Auto-generated constructor stub
+	}
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Employee")
-public class Employee extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	@Override
+	public String toString() {
+	return "Employee [empId=" + empId + ", empName=" + empName + ", empAge=" + empAge + ", empAddress=" + empAddress
+	+ "]";
+	}
 
-    public Employee() {
-        super();
- 
-    }
 
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");  
-		PrintWriter out = response.getWriter();  
-		          
-		String un=request.getParameter("userName");
-	    String ei=request.getParameter("EmpId");
-		String ea=request.getParameter("EmpAdd");
-		String ue=request.getParameter("userEmail");
-		String up=request.getParameter("userPass");
-		String cp=request.getParameter("confPass");
-		String g=request.getParameter("gender");  
-		String d=request.getParameter("dob");  
-		String sq=request.getParameter("SeqQue");
-		String sa=request.getParameter("SeqAns");
-		out.print("EMPLOYEE REGISTRATION FORM");
-		 out.print(un);
-		 out.print(ei);
-		 out.print(ea);
-		 out.print(ue);
-		 out.print(up);
-		 out.print(cp);
-		 out.print(g);
-		 out.print(d);
-		 out.print(sq);
-		 out.print(sa);
-		 String arr[]= request.getParameterValues("langKnown");
-		   
-		    for(String a:arr)
-		    {
-		   
-		    out.println(a+"<br>");
-		    }
-		
-			}
+	public Employee(int empId, String empName, int empAge, String empAddress) {
+	super();
+	this.empId = empId;
+	this.empName = empName;
+	this.empAge = empAge;
+	this.empAddress = empAddress;
+	}
+	public int getEmpId() {
+	return empId;
+	}
+	public void setEmpId(int empId) {
+	this.empId = empId;
+	}
+	public String getEmpName() {
+	return empName;
+	}
+	public void setEmpName(String empName) {
+	this.empName = empName;
+	}
+	public int getEmpAge() {
+	return empAge;
+	}
+	public void setEmpAge(int empAge) {
+	this.empAge = empAge;
+	}
+	public String getEmpAddress() {
+	return empAddress;
+	}
+	public void setEmpAddress(String empAddress) {
+	this.empAddress = empAddress;
+	}
+
+
+
 	}
 
 
